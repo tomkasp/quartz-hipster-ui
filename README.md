@@ -1,1 +1,2 @@
-# quartz-hipster-ui
+README for quartzui
+==========================
