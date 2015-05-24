@@ -359,6 +359,11 @@
             <artifactId>metrics-spark-reporter</artifactId>
             <version>${metrics-spark-reporter.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.tomkasp</groupId>
+            <artifactId>quartz-hipster-entities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <resources>
