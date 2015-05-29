@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('quartzuiApp')
-    .factory('Author', function ($resource) {
-        return $resource('api/authors/:id', {}, {
+    .factory('Scheduler', function ($resource) {
+        return $resource('quartz/schedulers/:id', {}, {
             'query': { method: 'GET', isArray: true},
             'get': {
                 method: 'GET',

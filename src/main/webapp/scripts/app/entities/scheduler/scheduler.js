@@ -13,7 +13,7 @@ angular.module('quartzuiApp')
                 views: {
                     'content@': {
                         templateUrl: 'scripts/app/entities/scheduler/schedulers.html',
-                        controller: 'AuthorController'
+                        controller: 'SchedulerController'
                     }
                 },
                 resolve: {
