@@ -91,6 +91,7 @@
                 <tr>
                     <th>ID</th>
                     <th translate="quartzuiApp.scheduler.name">Name</th>
+                    <th translate="quartzuiApp.scheduler.lastCheckinTime">Last check in Time</th>
                     <th></th>
                 </tr>
             </thead>
@@ -99,23 +100,24 @@
 
                     <td><a ui-sref="authorDetail({id:author.id})">{{scheduler.instanceName}}</a></td>
                     <td>{{scheduler.schedulerName}}</td>
-                    <!--<td>-->
-                        <!--<button type="submit"-->
-                                <!--ui-sref="authorDetail({id:author.id})"-->
-                                <!--class="btn btn-info btn-sm">-->
-                            <!--<span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>-->
-                        <!--</button>-->
-                        <!--<button type="submit"-->
-                                <!--ng-click="showUpdate(author.id)"-->
-                                <!--class="btn btn-primary btn-sm">-->
-                            <!--<span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>-->
-                        <!--</button>-->
-                        <!--<button type="submit"-->
-                                <!--ng-click="delete(author.id)"-->
-                                <!--class="btn btn-danger btn-sm">-->
-                            <!--<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>-->
-                        <!--</button>-->
-                    <!--</td>-->
+                    <td>{{scheduler.lastCheckInTime}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="authorDetail({id:author.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(author.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(author.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>
