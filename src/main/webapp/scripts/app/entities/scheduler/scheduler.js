@@ -3,9 +3,9 @@
 angular.module('quartzuiApp')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('author', {
+            .state('scheduler', {
                 parent: 'entity',
-                url: '/author',
+                url: '/scheduler',
                 data: {
                     roles: ['ROLE_USER'],
                     pageTitle: 'quartzuiApp.scheduler.home.title'

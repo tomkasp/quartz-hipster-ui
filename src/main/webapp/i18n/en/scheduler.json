@@ -1,6 +1,6 @@
 {
     "quartzuiApp": {
-        "author" : {
+        "scheduler" : {
             "home": {
                 "title": "Scheduler",
                 "createLabel": "Create a new Author",

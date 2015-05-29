@@ -1,16 +1,16 @@
 {
     "quartzuiApp": {
-        "author" : {
+        "scheduler" : {
             "home": {
                 "title": "Authors",
-                "createLabel": "Create a new Author",
-                "createOrEditLabel": "Create or edit a Author"
+                "createLabel": "Create a new Scheduler",
+                "createOrEditLabel": "Create or edit a Scheduler"
             },
             "delete": {
-                "question": "Are you sure you want to delete Author {{ id }}?"
+                "question": "Are you sure you want to delete Scheduler {{ id }}?"
             },
             "detail": {
-                "title": "Author"
+                "title": "Scheduler"
             },
             "name": "Name"
         }
