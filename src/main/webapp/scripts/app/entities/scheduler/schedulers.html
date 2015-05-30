@@ -99,8 +99,8 @@
             <tbody>
                 <tr ng-repeat="scheduler in schedulers">
 
-                    <td><a ui-sref="authorDetail({id:author.id})">{{scheduler.instanceName}}</a></td>
-                    <td>{{scheduler.schedulerName}}</td>
+                    <td>{{scheduler.instanceName}}</td>
+                    <td><a ui-sref="schedulerDetail({id:scheduler.schedulerName})">{{scheduler.schedulerName}}</a></td>
                     <td>{{scheduler.lastCheckInTime | date:'medium'}}</td>
                     <td>{{scheduler.checkinInterval}}</td>
                     <td>

@@ -2,7 +2,7 @@
     "quartzuiApp": {
         "scheduler" : {
             "home": {
-                "title": "Scheduler",
+                "title": "Schedulers",
                 "createLabel": "Create a new Author",
                 "createOrEditLabel": "Create or edit a Author"
             },
@@ -10,7 +10,7 @@
                 "question": "Are you sure you want to delete Author {{ id }}?"
             },
             "detail": {
-                "title": "Author"
+                "title": "Scheduler"
             },
             "name": "Name",
             "lastCheckinTime": "Last check in Time",
