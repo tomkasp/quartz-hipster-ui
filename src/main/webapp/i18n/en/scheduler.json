@@ -12,7 +12,7 @@
             "detail": {
                 "title": "Scheduler"
             },
-            "name": "Name",
+            "name": "Instance name",
             "lastCheckinTime": "Last check in Time",
             "checkInInterval": "Check in interval"
         }

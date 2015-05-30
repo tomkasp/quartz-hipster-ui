@@ -5,7 +5,7 @@ angular.module('quartzuiApp')
         $scope.scheduler = {};
         $scope.load = function (id) {
             Scheduler.get({id: id}, function(result) {
-              $scope.author = result;
+              $scope.scheduler = result;
             });
         };
         $scope.load($stateParams.id);
