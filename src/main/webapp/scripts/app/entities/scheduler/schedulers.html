@@ -89,9 +89,10 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Instance name</th>
                     <th translate="quartzuiApp.scheduler.name">Name</th>
                     <th translate="quartzuiApp.scheduler.lastCheckinTime">Last check in Time</th>
+                    <th translate="quartzuiApp.scheduler.checkInInterval"> Check in interval</th>
                     <th></th>
                 </tr>
             </thead>
@@ -100,23 +101,24 @@
 
                     <td><a ui-sref="authorDetail({id:author.id})">{{scheduler.instanceName}}</a></td>
                     <td>{{scheduler.schedulerName}}</td>
-                    <td>{{scheduler.lastCheckInTime}}</td>
+                    <td>{{scheduler.lastCheckInTime | date:'medium'}}</td>
+                    <td>{{scheduler.checkinInterval}}</td>
                     <td>
-                        <button type="submit"
-                                ui-sref="authorDetail({id:author.id})"
-                                class="btn btn-info btn-sm">
-                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
-                        </button>
-                        <button type="submit"
-                                ng-click="showUpdate(author.id)"
-                                class="btn btn-primary btn-sm">
-                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
-                        </button>
-                        <button type="submit"
-                                ng-click="delete(author.id)"
-                                class="btn btn-danger btn-sm">
-                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
-                        </button>
+                        <!--<button type="submit"-->
+                                <!--ui-sref="authorDetail({id:author.id})"-->
+                                <!--class="btn btn-info btn-sm">-->
+                            <!--<span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>-->
+                        <!--</button>-->
+                        <!--<button type="submit"-->
+                                <!--ng-click="showUpdate(author.id)"-->
+                                <!--class="btn btn-primary btn-sm">-->
+                            <!--<span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>-->
+                        <!--</button>-->
+                        <!--<button type="submit"-->
+                                <!--ng-click="delete(author.id)"-->
+                                <!--class="btn btn-danger btn-sm">-->
+                            <!--<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>-->
+                        <!--</button>-->
                     </td>
                 </tr>
             </tbody>
