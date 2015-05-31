@@ -89,8 +89,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th translate="quartzuiApp.scheduler.name">Scheduler name</th>
                     <th>Instance name</th>
-                    <th translate="quartzuiApp.scheduler.name">Name</th>
                     <th translate="quartzuiApp.scheduler.lastCheckinTime">Last check in Time</th>
                     <th translate="quartzuiApp.scheduler.checkInInterval"> Check in interval</th>
                     <th></th>
@@ -99,8 +99,8 @@
             <tbody>
                 <tr ng-repeat="scheduler in schedulers">
 
-                    <td>{{scheduler.instanceName}}</td>
                     <td><a ui-sref="schedulerDetail({id:scheduler.schedulerName})">{{scheduler.schedulerName}}</a></td>
+                    <td>{{scheduler.instanceName}}</td>
                     <td>{{scheduler.lastCheckInTime | date:'medium'}}</td>
                     <td>{{scheduler.checkinInterval}}</td>
                     <td>

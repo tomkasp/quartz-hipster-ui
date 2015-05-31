@@ -1,29 +1,54 @@
-
 <div>
-    <h2><span translate="quartzuiApp.scheduler.detail.title">Scheduler</span> {{scheduler.instanceName}}</h2>
+    <h2><span translate="quartzuiApp.scheduler.detail.title">Scheduler:</span> {{scheduler.schedulerName}}</h2>
+
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
-                <tr>
-                    <th translate="entity.detail.field">Field</th>
-                    <th translate="entity.detail.value">Value</th>
-                </tr>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <span translate="quartzuiApp.scheduler.name">Instance Name</span>
-                    </td>
-                    <td>
-                        <input type="text" class="input-sm form-control" value="{{scheduler.instanceName}}" readonly>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.scheduler.name">Scheduler Name</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{scheduler.schedulerName}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.scheduler.instanceName">Instance Name</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{scheduler.instanceName}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.scheduler.lastCheckinTime">Last check in time</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control"
+                           value="{{scheduler.lastCheckInTime | date:'medium'}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.scheduler.checkInInterval">Checkin interval</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{scheduler.checkinInterval}}" readonly>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>
 
     <button type="submit"
-            ui-sref="author"
+            ui-sref="scheduler"
             class="btn btn-info">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
     </button>
