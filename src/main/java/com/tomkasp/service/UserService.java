@@ -1,7 +1,6 @@
 package com.tomkasp.service;
 
 import com.tomkasp.domain.Authority;
-import com.tomkasp.domain.PersistentToken;
 import com.tomkasp.domain.User;
 import com.tomkasp.repository.AuthorityRepository;
 import com.tomkasp.repository.PersistentTokenRepository;

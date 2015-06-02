@@ -4,7 +4,6 @@ import com.codahale.metrics.annotation.Timed;
 import com.tomkasp.domain.User;
 import com.tomkasp.repository.UserRepository;
 import com.tomkasp.repository.search.UserSearchRepository;
-import com.tomkasp.security.AuthoritiesConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

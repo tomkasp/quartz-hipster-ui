@@ -2,8 +2,10 @@ package com.tomkasp.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.tomkasp.domain.Author;
+import com.tomkasp.entities.SchedulerState;
 import com.tomkasp.repository.AuthorRepository;
 import com.tomkasp.repository.search.AuthorSearchRepository;
+import com.tomkasp.repository.search.SchedulerStateSearchRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -35,6 +37,11 @@ public class AuthorResource {
 
     @Inject
     private AuthorSearchRepository authorSearchRepository;
+
+    @Inject
+    private SchedulerStateSearchRepository schedulerElasticRepository;
+
+
 
     /**
      * POST  /authors -> Create a new author.
@@ -122,6 +129,13 @@ public class AuthorResource {
     public List<Author> search(@PathVariable String query) {
         return StreamSupport
             .stream(authorSearchRepository.search(queryString(query)).spliterator(), false)
+            .collect(Collectors.toList());
+    }
+
+    @RequestMapping(value = "_search/schedulers/{query}", method = RequestMethod.GET)
+    public List<SchedulerState> searchForScheduler(@PathVariable String query){
+        return StreamSupport
+        .stream(schedulerElasticRepository.search(queryString(query)).spliterator(), false)
             .collect(Collectors.toList());
     }
 }

@@ -30,7 +30,7 @@ public class SwaggerConfiguration implements EnvironmentAware {
 
     private final Logger log = LoggerFactory.getLogger(SwaggerConfiguration.class);
 
-    public static final String DEFAULT_INCLUDE_PATTERN = "/api/.*";
+    public static final String DEFAULT_INCLUDE_PATTERN = "/quartz/.*";
 
     private RelaxedPropertyResolver propertyResolver;
 
@@ -50,7 +50,8 @@ public class SwaggerConfiguration implements EnvironmentAware {
         SwaggerSpringMvcPlugin swaggerSpringMvcPlugin = new SwaggerSpringMvcPlugin(springSwaggerConfig)
             .apiInfo(apiInfo())
             .genericModelSubstitutes(ResponseEntity.class)
-            .includePatterns(DEFAULT_INCLUDE_PATTERN);
+            .includePatterns(DEFAULT_INCLUDE_PATTERN)
+            .includePatterns("/api/.*");
 
         swaggerSpringMvcPlugin.build();
         watch.stop();
