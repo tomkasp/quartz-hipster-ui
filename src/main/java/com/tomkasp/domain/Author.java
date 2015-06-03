@@ -13,7 +13,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "AUTHOR")
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+//@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName="author")
 public class Author implements Serializable {
 

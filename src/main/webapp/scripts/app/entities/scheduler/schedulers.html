@@ -2,24 +2,24 @@
 
     <h2 translate="quartzuiApp.scheduler.home.title">scheduler</h2>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#saveAuthorModal" ng-click="clear()">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="quartzuiApp.scheduler.home.createLabel">Create a new Scheduler</span>
-                </button>
-            </div>
-            <div class="col-md-8">
-                <form name="searchForm" class="form-inline">
-                    <div class="form-group">
-                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
-                    </div>
-                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Scheduler</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-4">-->
+                <!--<button class="btn btn-primary" data-toggle="modal" data-target="#saveAuthorModal" ng-click="clear()">-->
+                    <!--<span class="glyphicon glyphicon-flash"></span> <span translate="quartzuiApp.scheduler.home.createLabel">Create a new Scheduler</span>-->
+                <!--</button>-->
+            <!--</div>-->
+            <!--<div class="col-md-8">-->
+                <!--<form name="searchForm" class="form-inline">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Scheduler</span>-->
+                    <!--</button>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <div class="modal fade" id="saveAuthorModal" tabindex="-1" role="dialog" aria-labelledby="myAuthorLabel"
          aria-hidden="true">
@@ -99,7 +99,7 @@
             <tbody>
                 <tr ng-repeat="scheduler in schedulers">
 
-                    <td><a ui-sref="schedulerDetail({id:scheduler.schedulerName})">{{scheduler.schedulerName}}</a></td>
+                    <td><a ui-sref="schedulerDetail({id:scheduler.id})">{{scheduler.id}}</a></td>
                     <td>{{scheduler.instanceName}}</td>
                     <td>{{scheduler.lastCheckInTime | date:'medium'}}</td>
                     <td>{{scheduler.checkinInterval}}</td>
