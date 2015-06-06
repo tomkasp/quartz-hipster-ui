@@ -1,0 +1,21 @@
+{
+    "quartzuiApp": {
+        "crontrigger" : {
+            "home": {
+                "title": "Cron trigger",
+                "createLabel": "Create a new cron trigger",
+                "createOrEditLabel": "Create or edit a Trigger"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Author {{ id }}?"
+            },
+            "detail": {
+                "title": "Scheduler"
+            },
+            "instanceName": "Instance name",
+            "name": "Scheduler name",
+            "lastCheckinTime": "Last check in Time",
+            "checkInInterval": "Check in interval"
+        }
+    }
+}

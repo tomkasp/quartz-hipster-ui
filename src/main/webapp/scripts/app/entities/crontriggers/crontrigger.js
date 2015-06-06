@@ -8,17 +8,17 @@ angular.module('quartzuiApp')
                 url: '/crontrigger',
                 data: {
                     roles: ['ROLE_USER'],
-                    pageTitle: 'quartzuiApp.scheduler.home.title'
+                    pageTitle: 'quartzuiApp.crontrigger.home.title'
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/entities/scheduler/schedulers.html',
+                        templateUrl: 'scripts/app/entities/crontriggers/crontrigger.html',
                         controller: 'SchedulerController'
                     }
                 },
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                        $translatePartialLoader.addPart('scheduler');
+                        $translatePartialLoader.addPart('crontrigger');
                         return $translate.refresh();
                     }]
                 }
