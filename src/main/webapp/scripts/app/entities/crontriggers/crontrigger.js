@@ -13,7 +13,7 @@ angular.module('quartzuiApp')
                 views: {
                     'content@': {
                         templateUrl: 'scripts/app/entities/crontriggers/crontrigger.html',
-                        controller: 'SchedulerController'
+                        controller: 'CrontriggerController'
                     }
                 },
                 resolve: {
