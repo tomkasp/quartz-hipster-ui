@@ -2,10 +2,10 @@
 
 angular.module('quartzuiApp')
     .controller('CrontriggerController', function ($scope, Crontrigger) {
-        $scope.schedulers = [];
+        $scope.crontriggers = [];
         $scope.loadAll = function() {
             Crontrigger.query(function(result) {
-               $scope.crontrigger = result;
+               $scope.crontriggers = result;
                 console.log(result);
             });
         };

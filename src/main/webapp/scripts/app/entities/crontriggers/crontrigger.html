@@ -97,10 +97,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="scheduler in schedulers">
+                <tr ng-repeat="crontrigger in crontriggers">
 
-                    <td><a ui-sref="schedulerDetail({id:scheduler.id})">{{scheduler.id}}</a></td>
-                    <td>{{scheduler.instanceName}}</td>
+                    <td><a ui-sref="schedulerDetail({id:scheduler.id})">{{crontrigger.schedulerName}}</a></td>
+                    <td>{{crontrigger.cronExpression}}</td>
                     <td>{{scheduler.lastCheckInTime | date:'medium'}}</td>
                     <td>{{scheduler.checkinInterval}}</td>
                     <td>
