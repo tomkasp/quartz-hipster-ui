@@ -89,10 +89,11 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th translate="quartzuiApp.scheduler.name">Scheduler name</th>
-                    <th>Instance name</th>
-                    <th translate="quartzuiApp.scheduler.lastCheckinTime">Last check in Time</th>
-                    <th translate="quartzuiApp.scheduler.checkInInterval"> Check in interval</th>
+                    <th translate="quartzuiApp.crontrigger.home.schedulername">Scheduler name</th>
+                    <th translate="quartzuiApp.crontrigger.home.triggername">Trigger name</th>
+                    <th translate="quartzuiApp.crontrigger.home.triggergroup">Trigger group</th>
+                    <th translate="quartzuiApp.crontrigger.home.cronexpression">Cron expression</th>
+                    <th translate="quartzuiApp.crontrigger.home.timezoneid">Time zone id</th>
                     <th></th>
                 </tr>
             </thead>
@@ -100,9 +101,10 @@
                 <tr ng-repeat="crontrigger in crontriggers">
 
                     <td><a ui-sref="schedulerDetail({id:scheduler.id})">{{crontrigger.schedulerName}}</a></td>
+                    <td>{{crontrigger.triggerName}}</td>
+                    <td>{{crontrigger.triggerGroup}}</td>
                     <td>{{crontrigger.cronExpression}}</td>
-                    <td>{{scheduler.lastCheckInTime | date:'medium'}}</td>
-                    <td>{{scheduler.checkinInterval}}</td>
+                    <td>{{crontrigger.timeZoneId}}</td>
                     <td>
                         <!--<button type="submit"-->
                                 <!--ui-sref="authorDetail({id:author.id})"-->

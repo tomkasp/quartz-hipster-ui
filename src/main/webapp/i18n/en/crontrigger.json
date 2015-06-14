@@ -2,6 +2,11 @@
     "quartzuiApp": {
         "crontrigger" : {
             "home": {
+                "schedulername": "Scheduler name",
+                "triggername": "Trigger name",
+                "triggergroup": "Trigger group",
+                "cronexpression": "Cron expression",
+                "timezoneid": "Time zone ID",
                 "title": "Cron trigger",
                 "createLabel": "Create a new cron trigger",
                 "createOrEditLabel": "Create or edit a Trigger"
