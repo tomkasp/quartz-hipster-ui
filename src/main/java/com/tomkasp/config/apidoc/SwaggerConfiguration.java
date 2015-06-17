@@ -51,7 +51,7 @@ public class SwaggerConfiguration implements EnvironmentAware {
             .apiInfo(apiInfo())
             .genericModelSubstitutes(ResponseEntity.class)
             .includePatterns(DEFAULT_INCLUDE_PATTERN)
-            .includePatterns("/api/.*");
+            .includePatterns("/quartz/.*");
 
         swaggerSpringMvcPlugin.build();
         watch.stop();

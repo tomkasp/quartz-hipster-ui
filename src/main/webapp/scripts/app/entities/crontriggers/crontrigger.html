@@ -100,7 +100,7 @@
             <tbody>
                 <tr ng-repeat="crontrigger in crontriggers">
 
-                    <td><a ui-sref="schedulerDetail({id:scheduler.id})">{{crontrigger.schedulerName}}</a></td>
+                    <td><a ui-sref="cronDetail({scheduler:crontrigger.schedulerName, triggergroup:crontrigger.triggerGroup, triggername:crontrigger.triggerName})">{{crontrigger.schedulerName}}</a></td>
                     <td>{{crontrigger.triggerName}}</td>
                     <td>{{crontrigger.triggerGroup}}</td>
                     <td>{{crontrigger.cronExpression}}</td>

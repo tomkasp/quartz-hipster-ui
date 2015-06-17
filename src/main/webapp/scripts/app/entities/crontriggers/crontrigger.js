@@ -22,5 +22,25 @@ angular.module('quartzuiApp')
                         return $translate.refresh();
                     }]
                 }
+            })
+            .state('cronDetail', {
+                parent: 'entity',
+                url: '/cron/:scheduler/:triggergroup/:triggername',
+                data: {
+                    roles: ['ROLE_USER'],
+                    pageTitle: 'quartzuiApp.scheduler.detail.title'
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/scheduler/scheduler-detail.html',
+                        controller: 'CrontriggerDetailController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('scheduler');
+                        return $translate.refresh();
+                    }]
+                }
             });
     });
