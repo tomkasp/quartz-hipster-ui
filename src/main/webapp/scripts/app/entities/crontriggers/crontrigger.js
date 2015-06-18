@@ -32,13 +32,13 @@ angular.module('quartzuiApp')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/entities/scheduler/scheduler-detail.html',
+                        templateUrl: 'scripts/app/entities/crontriggers/crontrigger-detail.html',
                         controller: 'CrontriggerDetailController'
                     }
                 },
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
-                        $translatePartialLoader.addPart('scheduler');
+                        $translatePartialLoader.addPart('crontrigger');
                         return $translate.refresh();
                     }]
                 }

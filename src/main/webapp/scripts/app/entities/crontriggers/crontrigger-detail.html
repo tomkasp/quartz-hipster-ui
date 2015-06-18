@@ -1,0 +1,63 @@
+<div>
+    <h2><span translate="quartzuiApp.crontrigger.detail.title">Cron Trigger:</span> {{crontrigger.triggerName}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.crontrigger.home.schedulername">Scheduler Name</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{crontrigger.schedulerName}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.crontrigger.home.triggername">Trigger name</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{crontrigger.triggerName}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.crontrigger.home.triggergroup">Trigger group</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control"
+                           value="{{crontrigger.triggerGroup}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.crontrigger.home.cronexpression">Cron expression</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{crontrigger.cronExpression}}" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="quartzuiApp.crontrigger.home.timezoneid">Time zone id</span>
+                </td>
+                <td>
+                    <input type="text" class="input-sm form-control" value="{{crontrigger.timeZoneId}}" readonly>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="crontrigger"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

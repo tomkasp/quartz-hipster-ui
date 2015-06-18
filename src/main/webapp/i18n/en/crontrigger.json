@@ -15,7 +15,7 @@
                 "question": "Are you sure you want to delete Author {{ id }}?"
             },
             "detail": {
-                "title": "Scheduler"
+                "title": "Cron trigger"
             },
             "instanceName": "Instance name",
             "name": "Scheduler name",
